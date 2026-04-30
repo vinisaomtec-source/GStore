@@ -1,0 +1,11 @@
+git config --global user.name gallojunior
+git config --global user.email gallojunior@gmail.com
+
+-- Criar o arquivo de gitignore
+dotnet new gitignore
+
+-- Criar o projeto API
+dotnet new webapi -o GStore.API --use-controllers
+
+-- Instalação das bibliotecas/pacotes
+-- Extensão Nuget Gallery
