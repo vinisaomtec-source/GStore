@@ -28,6 +28,15 @@ public class AppDbContext :  IdentityDbContext<Usuario>
             builder.Entity<IdentityUserClaim<string>>().ToTable("usuario_regras");
             builder.Entity<IdentityRoleClaim<string>>().ToTable("perfil_regras");
         #endregion
+
+        #region mock de dados 
+        SeedCategoria seedCategoria =  new(builder);
+        SeedProduto seedProduto =  new(builder);
+        SeedUsuario seedUsuario =  new(builder);
+        #endregion
+
+        
+
     }
 
 }
