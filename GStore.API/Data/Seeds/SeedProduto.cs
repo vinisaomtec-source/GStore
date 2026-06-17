@@ -1827,5 +1827,3 @@ public class SeedProduto
         builder.Entity<Produto>().HasData(produtos);
     }
 }
-
-

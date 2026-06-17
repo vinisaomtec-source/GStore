@@ -10,31 +10,30 @@ public class Produto
     public int Id { get; set; }
 
     [Required]
-    public int CategoriaId { get; set; } 
-
+    public int CategoriaId { get; set; }
     [ForeignKey(nameof(CategoriaId))]
-    public Categoria Categoria { get; set; } 
+    public Categoria Categoria { get; set; }
 
     [Required]
     [StringLength(100)]
-    public string Nome { get; set; } 
+    public string Nome { get; set; }
 
     [StringLength(3000)]
-    public string Descricao {get; set;}
+    public string Descricao { get; set; }
 
     [Required]
-    public int Qtde { get; set;} = 0;
-
-    [Required]
-    [Column(TypeName = "decimal(12,2)")]
-    public decimal ValorCusto { get; set;} = 0;
+    public int Qtde { get; set; } = 0;
 
     [Required]
     [Column(TypeName = "decimal(12,2)")]
-    public decimal ValorVenda { get; set;} = 0;
+    public decimal ValorCusto { get; set; } = 0;
+
+    [Required]
+    [Column(TypeName = "decimal(12,2)")]
+    public decimal ValorVenda { get; set; } = 0;
 
     public bool Destaque { get; set; } = false;
 
     [StringLength(300)]
-    public string Foto { get; set;}
+    public string Foto { get; set; }
 }
